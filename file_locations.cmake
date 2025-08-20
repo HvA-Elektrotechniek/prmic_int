@@ -6,7 +6,8 @@
 #           1.1 add objdump to the program list
 #           1.2 added Linux 
 #           1.3 cleaned up file. No more changes needed with standard procedure
-# @date     11-5-2023
+#           1.4 Get absolute paths under windows increasing portability
+# @date     20-8-2025
 #
 
 # root folder of our tool. is automatically determined
@@ -23,7 +24,11 @@ endif()
 
 # If we use standard installation no change in this file is needed
 if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
+<<<<<<< HEAD
     # windows avr-gcc compiler
+=======
+    # Get the abdolute path to these folders usin CMAKE
+>>>>>>> 1490eb104f9f8b12c1f3cdf426862f53b2fe8cf6
     get_filename_component(TOOLCHAIN_PATH  "../avr8-gnu-toolchain-win32_x86_64/bin" ABSOLUTE )
     get_filename_component(AVRDUDE_PATH  "../avrdude-v7.1-windows-x64/" ABSOLUTE )
 else()
