@@ -24,11 +24,8 @@ endif()
 
 # If we use standard installation no change in this file is needed
 if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
-<<<<<<< HEAD
     # windows avr-gcc compiler
-=======
-    # Get the abdolute path to these folders usin CMAKE
->>>>>>> 1490eb104f9f8b12c1f3cdf426862f53b2fe8cf6
+    # Get the abdolute path to these folders using CMAKE
     get_filename_component(TOOLCHAIN_PATH  "../avr8-gnu-toolchain-win32_x86_64/bin" ABSOLUTE )
     get_filename_component(AVRDUDE_PATH  "../avrdude-v7.1-windows-x64/" ABSOLUTE )
 else()
