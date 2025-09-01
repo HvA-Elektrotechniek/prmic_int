@@ -56,7 +56,7 @@ set (AVR_SIZE           ${TOOLCHAIN_PATH}/avr-size${FILE_EXTENSION} )
 set (AVR_OBJCOPY        ${TOOLCHAIN_PATH}/avr-objcopy${FILE_EXTENSION} )
 set (AVR_OBJDUMP        ${TOOLCHAIN_PATH}/avr-objdump${FILE_EXTENSION} )
 set (AVR_READELF        ${TOOLCHAIN_PATH}/avr-readelf${FILE_EXTENSION} )
-set (AVR_DUDE           ${AVRDUDE_PATH}avrdude${FILE_EXTENSION})
+set (AVR_DUDE           ${AVRDUDE_PATH}/avrdude${FILE_EXTENSION})
 
 # set path for the compiler
 set(AVR_PATH ${TOOLCHAIN_PATH}../)
