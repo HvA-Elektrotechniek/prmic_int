@@ -186,14 +186,14 @@
 
         # the actual Avrdude command
         add_custom_target(${PROJECT_NAME}_FLASH
-                ${AVR_DUDE} -p ${TARGET_CPU}  -c ${PROGRAMMER} ${PORT_COMMAND} -b115200  ${FLASH_VERBOSE_FLAG} -U flash:w:${PROJECT_BINARY_DIR}/${PROJECT_NAME}.elf:a
+                ${AVR_DUDE} -e -p ${TARGET_CPU}  -c ${PROGRAMMER} ${PORT_COMMAND} -b115200  ${FLASH_VERBOSE_FLAG} -U flash:w:${PROJECT_BINARY_DIR}/${PROJECT_NAME}.elf:a
                 DEPENDS ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.elf
         )
     else()
         # for Windows (much easier)
         # avrdude command
         add_custom_target(${PROJECT_NAME}_FLASH
-            ${AVR_DUDE} -p ${TARGET_CPU} -P ${COMPORT} -c ${PROGRAMMER} -b115200  ${FLASH_VERBOSE_FLAG} -U flash:w:${PROJECT_BINARY_DIR}/${PROJECT_NAME}.elf:a
+            ${AVR_DUDE} -e -p ${TARGET_CPU} -P ${COMPORT} -c ${PROGRAMMER} -b115200  ${FLASH_VERBOSE_FLAG} -U flash:w:${PROJECT_BINARY_DIR}/${PROJECT_NAME}.elf:a
             DEPENDS ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.elf
         )
     endif()
